@@ -2,7 +2,7 @@
 
 int main() {
     // Declaração das variáveis para a Carta 1
-    char estado1;
+    char estado1[50];
     char codigo1[4];
     char nomeCidade1[50];
     int populacao1;
@@ -11,7 +11,7 @@ int main() {
     int pontosTuristicos1;
 
     // Declaração das variáveis para a Carta 2
-    char estado2;
+    char estado2[50];
     char codigo2[4];
     char nomeCidade2[50];
     int populacao2;
@@ -22,13 +22,13 @@ int main() {
     // Leitura dos dados da Carta 1
     printf("=== Cadastro da Carta 1 ===\n");
     printf("Digite o Estado: ");
-    scanf(" %c", &estado1);
+    scanf(" %s", &estado1);
 
-    printf("Digite o Código da Carta (ex: A01):\n");
+    printf("Digite o Código da Carta: ");
     scanf(" %s", &codigo1);
 
     printf("Digite o Nome da Cidade: ");
-    scanf(" %[^\n]", nomeCidade1);
+    scanf(" %s", &nomeCidade1);
 
     printf("Digite a População: ");
     scanf("%d", &populacao1);
@@ -44,14 +44,14 @@ int main() {
 
     // Leitura dos dados da Carta 2
     printf("\n=== Cadastro da Carta 2 ===\n");
-    printf("Digite o Estado (A-H): ");
-    scanf(" %c", &estado2);
+    printf("Digite o Estado: ");
+    scanf("%s", &estado2);
 
-    printf("Digite o Código da Carta (ex: B03): ");
-    scanf("%s", codigo2);
+    printf("Digite o Código da Carta: ");
+    scanf("%s", &codigo2);
 
     printf("Digite o Nome da Cidade: ");
-    scanf(" %[^\n]", nomeCidade2);
+    scanf("%s", &nomeCidade2);
 
     printf("Digite a População: ");
     scanf("%d", &populacao2);
@@ -67,7 +67,7 @@ int main() {
 
     // Exibição dos dados da Carta 1
     printf("\n=== Carta 1 ===\n");
-    printf("Estado: %c\n", estado1);
+    printf("Estado: %s\n", estado1);
     printf("Código: %s\n", codigo1);
     printf("Nome da Cidade: %s\n", nomeCidade1);
     printf("População: %d\n", populacao1);
@@ -77,7 +77,7 @@ int main() {
 
     // Exibição dos dados da Carta 2
     printf("\n=== Carta 2 ===\n");
-    printf("Estado: %c\n", estado2);
+    printf("Estado: %s\n", estado2);
     printf("Código: %s\n", codigo2);
     printf("Nome da Cidade: %s\n", nomeCidade2);
     printf("População: %d\n", populacao2);
